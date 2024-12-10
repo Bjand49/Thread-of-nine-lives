@@ -12,7 +12,7 @@ class ApiClient {
   private getClient(): AxiosInstance {
     if (!this.apiClient) {
       this.apiClient = axios.create({
-        baseURL: "https://localhost:7195/",
+        baseURL: "https://thread-of-nine-lives-1.onrender.com/",
         timeout: 10000,
         headers: {
           ContentType: 'application/json',
