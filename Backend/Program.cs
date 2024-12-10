@@ -66,8 +66,11 @@ namespace Backend
             builder.Services.AddMemoryCache(); // Bruger vi til in-memory caching for blacklisting tokens
 
 
-            builder.Services.AddCors(p => p.AddPolicy("*", b =>
-            b.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader()));
+            builder.Services.AddCors(p => 
+            p.AddPolicy("*", b =>
+            b.WithOrigins("https://thread-of-nine-lives.vercel.app/")
+            .AllowAnyMethod()
+            .AllowAnyHeader()));
 
 
             PersistanceConfiguration.ConfigureServices(builder.Services, dbtype.DefaultConnection);
