@@ -7,7 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Infrastructure.Persistance.Document;
 using Domain.Entities.Mongo;
 using Domain.Entities;
-
+ 
 Console.WriteLine("Starting mongoDB migration");
 var builder = Host.CreateDefaultBuilder(args)
 .ConfigureServices(services =>
